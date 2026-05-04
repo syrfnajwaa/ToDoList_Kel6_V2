@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- index.html -->
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskly — Atur Hidupmu</title>
+  <meta name="description"
+    content="Taskly adalah teman produktivitas pribadimu. Ubah kekacauan menjadi kejernihan — kelola tugas, atur tenggat waktu, dan tetap fokus setiap hari." />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+
+<body>
+
+  <!-- ── Background Orbs ── -->
+  <div class="orbs-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ── Navbar ── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="Taskly home">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </svg>
+      Taskly
+    </a>
+
+    <ul class="nav-menu" role="list">
+      <li><a href="#features">Fitur</a></li>
+      <li><a href="#how-it-works">Cara Kerja</a></li>
+      <li><a href="#stats">Tentang</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="auth.html" class="btn btn-ghost" id="btn-nav-login">Masuk</a>
+      <a href="auth.html" class="btn btn-primary" id="btn-nav-start">Mulai Sekarang</a>
+    </div>
+  </nav>
+
+  <!-- ── Main ── -->
+  <main class="landing-main">
+
+    <!-- ── Hero ── -->
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <div class="hero-tag" aria-hidden="true">✦ Teman produktivitas Anda</div>
+        <h1 class="hero-title" id="hero-heading">
+          Ubah kekacauan menjadi<br />
+          <span>kejernihan</span>, satu tugas<br />
+          setiap saat.
+        </h1>
+        <p class="hero-subtitle">
+          Taskly membantu Anda menangkap setiap ide, melacak setiap tenggat waktu,
+          dan menyelesaikan hal yang penting — tersimpan aman di browser Anda.
+        </p>
+        <div class="hero-actions">
+          <a href="auth.html" class="btn btn-primary btn-hero-primary" id="btn-hero-start">
+            Mulai gratis →
+          </a>
+          <a href="#how-it-works" class="btn btn-ghost btn-hero-secondary" id="btn-hero-how">
+            Lihat cara kerjanya
+          </a>
+        </div>
+      </div>
+
+      <!-- Mini Dashboard Mockup -->
+      <div class="hero-mockup-wrapper" aria-hidden="true">
+        <div class="hero-mockup">
+          <!-- Mockup window chrome -->
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <div class="mockup-dot mockup-dot-red"></div>
+              <div class="mockup-dot mockup-dot-amber"></div>
+              <div class="mockup-dot mockup-dot-green"></div>
+            </div>
+            <div class="mockup-title-bar"></div>
+          </div>
+
+          <div class="mockup-body">
+            <!-- Sidebar -->
+            <div class="mockup-sidebar">
+              <div class="mockup-menu-item active"></div>
+              <div class="mockup-menu-item"></div>
+              <div class="mockup-menu-item"></div>
+              <div class="mockup-menu-item"></div>
+            </div>
+
+            <!-- Task cards -->
+            <div class="mockup-content">
+              <!-- Task 1 – High priority -->
+              <div class="mockup-task">
+                <div class="mockup-task-header">
+                  <div class="mockup-check done"></div>
+                  <div class="mockup-task-line done"></div>
+                  <span class="mockup-badge high">High</span>
+                </div>
+                <div class="mockup-sub-line"></div>
+              </div>
+              <!-- Task 2 – Medium priority -->
+              <div class="mockup-task">
+                <div class="mockup-task-header">
+                  <div class="mockup-check"></div>
+                  <div class="mockup-task-line"></div>
+                  <span class="mockup-badge medium">Med</span>
+                </div>
+                <div class="mockup-sub-line"></div>
+              </div>
+              <!-- Task 3 – Low priority -->
+              <div class="mockup-task">
+                <div class="mockup-task-header">
+                  <div class="mockup-check"></div>
+                  <div class="mockup-task-line"></div>
+                  <span class="mockup-badge low">Low</span>
+                </div>
+                <div class="mockup-sub-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Features ── -->
+    <section class="features" id="features" aria-labelledby="features-heading">
+      <p class="section-label">Fitur</p>
+      <h2 class="section-title" id="features-heading">Semua yang Anda butuhkan<br />untuk tetap fokus</h2>
+      <p class="section-subtitle">Dirancang untuk fokus dan kesederhanaan. Tanpa bloat, tanpa langganan — hanya alat
+        yang membantu Anda produktif.</p>
+
+      <div class="features-grid" role="list">
+        <!-- 1 -->
+        <article class="feature-card" role="listitem">
+          <div class="feature-icon teal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+              <line x1="16" y1="2" x2="16" y2="6" />
+              <line x1="8" y1="2" x2="8" y2="6" />
+              <line x1="3" y1="10" x2="21" y2="10" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Tenggat Waktu Cerdas</h3>
+          <p class="feature-desc">Label hitungan mundur otomatis — terlambat, hari ini, segera — agar Anda selalu tahu
+            apa yang perlu perhatian sekarang.</p>
+        </article>
+
+        <!-- 2 -->
+        <article class="feature-card" role="listitem">
+          <div class="feature-icon coral" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="12" y1="8" x2="12" y2="12" />
+              <line x1="12" y1="16" x2="12.01" y2="16" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Tingkat Prioritas</h3>
+          <p class="feature-desc">Tandai setiap tugas Tinggi, Sedang, atau Rendah dengan badge warna cerah agar
+            pekerjaan paling penting selalu terlihat.</p>
+        </article>
+
+        <!-- 3 -->
+        <article class="feature-card" role="listitem">
+          <div class="feature-icon violet" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+              <line x1="7" y1="7" x2="7.01" y2="7" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Kategori</h3>
+          <p class="feature-desc">Atur tugas ke dalam Kerja, Pribadi, Kesehatan, Belajar, dan lainnya. Filter
+            berdasarkan kategori hanya dengan satu klik.</p>
+        </article>
+
+        <!-- 4 -->
+        <article class="feature-card" role="listitem">
+          <div class="feature-icon amber" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Pencarian Cepat</h3>
+          <p class="feature-desc">Temukan tugas apa pun dalam milidetik dengan pencarian real-time di seluruh judul dan
+            deskripsi.</p>
+        </article>
+
+        <!-- 5 -->
+        <article class="feature-card" role="listitem">
+          <div class="feature-icon teal" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10" />
+              <line x1="12" y1="20" x2="12" y2="4" />
+              <line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Lacak Progres</h3>
+          <p class="feature-desc">Lihat bar penyelesaian hari ini, hitung tugas yang selesai, dan rayakan semangat
+            harian dengan statistik visual.</p>
+        </article>
+
+        <!-- 6 -->
+        <article class="feature-card" role="listitem">
+          <div class="feature-icon violet" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3 class="feature-title">Multi Akun</h3>
+          <p class="feature-desc">Daftarkan beberapa pengguna di satu perangkat — masing-masing dengan tugas,
+            pengaturan, dan data pribadi sendiri.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── How It Works ── -->
+    <section class="how-it-works" id="how-it-works" aria-labelledby="how-heading">
+      <p class="section-label">Proses</p>
+      <h2 class="section-title" id="how-heading">Siap digunakan dalam 3 langkah</h2>
+
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">1</div>
+          <h3 class="step-title">Buat Akun</h3>
+          <p class="step-desc">Daftar dalam hitungan detik — hanya nama, email, dan kata sandi. Tanpa kartu kredit,
+            tanpa konfirmasi email.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">2</div>
+          <h3 class="step-title">Tambahkan Tugas Anda</h3>
+          <p class="step-desc">Isi judul, pilih tingkat prioritas, atur tenggat waktu, dan pilih kategori. Selesai dalam
+            10 detik.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number" aria-hidden="true">3</div>
+          <h3 class="step-title">Tetap Produktif</h3>
+          <p class="step-desc">Centang tugas yang selesai, pantau bar progres hari ini, dan jaga semangat Anda setiap
+            hari.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Stats ── -->
+    <section class="stats-section" id="stats" aria-labelledby="stats-heading">
+      <h2 class="sr-only" id="stats-heading">Taskly dalam angka</h2>
+      <div class="stats-card" role="list">
+        <div role="listitem">
+          <div class="stat-value" aria-label="Lebih dari 10.000 pengguna">10.000+</div>
+          <div class="stat-label">Pengguna Aktif</div>
+        </div>
+        <div class="stat-divider" role="listitem">
+          <div class="stat-value" aria-label="Lebih dari 500.000 tugas selesai">500K+</div>
+          <div class="stat-label">Tugas Diselesaikan</div>
+        </div>
+        <div class="stat-divider" role="listitem">
+          <div class="stat-value" aria-label="99% kepuasan">99%</div>
+          <div class="stat-label">Tingkat Kepuasan</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer role="contentinfo">
+    <div>
+      <div class="footer-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+        </svg>
+        Taskly
+      </div>
+      <p class="footer-tagline">Atur hidupmu, satu tugas setiap saat.</p>
+    </div>
+    <p class="footer-copy">&copy; 2026 Taskly. Semua hak dilindungi.</p>
+  </footer>
+
+  <!-- ── Toast Container ── -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ── Scripts ── -->
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script>
+    // Redirect if already logged in
+    (function () {
+      const session = Utils.getSession();
+      if (session) Utils.navigateTo('dashboard.html');
+    })();
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    // Intersection Observer – feature cards
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('animate-in'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.feature-card, .step-card').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
