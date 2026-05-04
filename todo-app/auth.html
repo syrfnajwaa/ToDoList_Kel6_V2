@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- auth.html -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskly — Masuk atau Daftar</title>
+  <meta name="description" content="Masuk atau buat akun Taskly gratis untuk mulai mengelola tugas Anda." />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/globals.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body class="auth-page">
+
+  <!-- ── Background Orbs ── -->
+  <div class="orbs-container" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ── Branding Side ── -->
+  <aside class="auth-branding" aria-label="Taskly branding">
+    <div class="auth-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        aria-hidden="true">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      Taskly
+    </div>
+    <p class="auth-tagline">Cara <span>lebih cerdas</span> untuk tetap di atas segalanya.</p>
+
+    <ul class="auth-bullets" role="list">
+      <li class="auth-bullet">
+        <div class="auth-bullet-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="auth-bullet-text">
+          <strong>100% Privat</strong>
+          <span>Semua data hanya tersimpan di browser Anda. Tidak ada yang keluar dari perangkat.</span>
+        </div>
+      </li>
+      <li class="auth-bullet">
+        <div class="auth-bullet-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="auth-bullet-text">
+          <strong>Tanpa Instalasi</strong>
+          <span>Buka di browser mana saja, tanpa unduhan atau pengaturan.</span>
+        </div>
+      </li>
+      <li class="auth-bullet">
+        <div class="auth-bullet-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"/>
+          </svg>
+        </div>
+        <div class="auth-bullet-text">
+          <strong>Multi Akun</strong>
+          <span>Setiap pengguna memiliki ruang tugas pribadi di perangkat yang sama.</span>
+        </div>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- ── Form Side ── -->
+  <section class="auth-form-side" aria-label="Authentication forms">
+    <div class="auth-card">
+
+      <!-- Tab Toggle -->
+      <div class="auth-tabs" role="tablist" aria-label="Login or Register">
+        <button class="auth-tab active" data-tab="login" id="tab-login"
+                role="tab" aria-selected="true" aria-controls="panel-login">
+          Masuk
+        </button>
+        <button class="auth-tab" data-tab="register" id="tab-register"
+                role="tab" aria-selected="false" aria-controls="panel-register">
+          Daftar
+        </button>
+      </div>
+
+      <!-- ── Login Panel ── -->
+      <div class="auth-form-panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <h1 class="form-heading">Selamat datang kembali</h1>
+        <p class="form-subheading">Masuk untuk melanjutkan ke tugas Anda</p>
+
+        <form id="login-form" novalidate autocomplete="on">
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="login-email">Alamat email</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+              <input type="email" class="form-input" id="login-email"
+                     name="email" placeholder="anda@contoh.com"
+                     autocomplete="email" aria-required="true"
+                     aria-describedby="login-email-error" />
+            </div>
+            <p class="field-error" id="login-email-error" role="alert"></p>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="login-password">Kata sandi</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" class="form-input" id="login-password"
+                     name="password" placeholder="Masukkan kata sandi Anda"
+                     autocomplete="current-password" aria-required="true"
+                     aria-describedby="login-pass-error" />
+              <button type="button" class="password-toggle" id="toggle-login-pass"
+                      aria-label="Tampilkan atau sembunyikan kata sandi">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <p class="field-error" id="login-pass-error" role="alert"></p>
+          </div>
+
+          <!-- Remember Me -->
+          <div class="form-check">
+            <input type="checkbox" id="remember-me" name="remember" />
+            <label for="remember-me">Ingat saya</label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary btn-submit" id="btn-login" aria-label="Masuk ke Taskly">
+            <span class="btn-text">Masuk</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="form-switch">
+            Belum punya akun?
+            <a data-switch="register" role="button" tabindex="0"
+               aria-label="Beralih ke formulir daftar">Daftar</a>
+          </p>
+        </form>
+      </div>
+
+      <!-- ── Register Panel ── -->
+      <div class="auth-form-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register">
+        <h2 class="form-heading">Buat akun</h2>
+        <p class="form-subheading">Gratis selamanya — tanpa kartu kredit</p>
+
+        <form id="register-form" novalidate autocomplete="on">
+          <!-- Full Name -->
+          <div class="form-group">
+            <label class="form-label" for="reg-name">Nama lengkap</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </span>
+              <input type="text" class="form-input" id="reg-name"
+                     name="name" placeholder="Budi Santoso"
+                     autocomplete="name" aria-required="true"
+                     aria-describedby="reg-name-error" />
+            </div>
+            <p class="field-error" id="reg-name-error" role="alert"></p>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Alamat email</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </span>
+              <input type="email" class="form-input" id="reg-email"
+                     name="email" placeholder="anda@contoh.com"
+                     autocomplete="email" aria-required="true"
+                     aria-describedby="reg-email-error" />
+            </div>
+            <p class="field-error" id="reg-email-error" role="alert"></p>
+          </div>
+
+          <!-- Password + Strength -->
+          <div class="form-group">
+            <label class="form-label" for="reg-password">Kata sandi</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </span>
+              <input type="password" class="form-input" id="reg-password"
+                     name="password" placeholder="Min. 6 karakter"
+                     autocomplete="new-password" aria-required="true"
+                     aria-describedby="reg-pass-error" />
+              <button type="button" class="password-toggle" id="toggle-reg-pass"
+                      aria-label="Show or hide password">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+            </div>
+            <div class="password-strength" aria-live="polite">
+              <div class="strength-bar-track">
+                <div class="strength-bar-fill" id="strength-bar"></div>
+              </div>
+              <p class="strength-label" id="strength-label"></p>
+            </div>
+            <p class="field-error" id="reg-pass-error" role="alert"></p>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="form-group">
+            <label class="form-label" for="reg-confirm">Konfirmasi kata sandi</label>
+            <div class="input-wrapper">
+              <span class="input-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 11l3 3L22 4"/>
+                  <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                </svg>
+              </span>
+              <input type="password" class="form-input" id="reg-confirm"
+                     name="confirm" placeholder="Ulangi kata sandi Anda"
+                     autocomplete="new-password" aria-required="true"
+                     aria-describedby="reg-confirm-error" />
+            </div>
+            <p class="field-error" id="reg-confirm-error" role="alert"></p>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary btn-submit" id="btn-register"
+                  aria-label="Buat akun Taskly">
+            <span class="btn-text">Buat Akun</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="form-switch">
+            Sudah punya akun?
+            <a data-switch="login" role="button" tabindex="0"
+               aria-label="Beralih ke formulir masuk">Masuk</a>
+          </p>
+        </form>
+      </div>
+
+    </div><!-- /.auth-card -->
+  </section>
+
+  <!-- ── Toast Container ── -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ── Scripts ── -->
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
