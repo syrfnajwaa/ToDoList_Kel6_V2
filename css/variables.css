@@ -1,0 +1,75 @@
+/* css/variables.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600&family=DM+Serif+Display&display=swap');
+
+:root {
+  /* ── Colors ───────────────────────────────────── */
+  --bg-primary:    #0A0A12;
+  --bg-secondary:  #12121E;
+  --bg-card:       #1A1A2E;
+  --bg-glass:      rgba(255, 255, 255, 0.04);
+  --bg-glass-hover:rgba(255, 255, 255, 0.07);
+
+  --accent-teal:   #00F5D4;
+  --accent-violet: #9B72CF;
+  --accent-coral:  #FF6B6B;
+  --accent-amber:  #FFB347;
+
+  --text-primary:  #F0EFF4;
+  --text-secondary:#8B8BA8;
+  --text-muted:    #4A4A6A;
+
+  --border:        rgba(255, 255, 255, 0.08);
+  --border-hover:  rgba(255, 255, 255, 0.16);
+
+  --priority-high:   #FF6B6B;
+  --priority-medium: #FFB347;
+  --priority-low:    #00F5D4;
+
+  --danger:  #FF4757;
+  --success: #2ED573;
+
+  /* ── Typography ──────────────────────────────── */
+  --font-body:    'Sora', sans-serif;
+  --font-display: 'DM Serif Display', serif;
+
+  /* ── Spacing ─────────────────────────────────── */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ── Border Radius ───────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ─────────────────────────────────── */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.6);
+  --shadow-teal:0 0 24px rgba(0,245,212,0.18);
+  --shadow-violet:0 0 24px rgba(155,114,207,0.22);
+
+  /* ── Transitions ─────────────────────────────── */
+  --transition-fast:   0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow:   0.4s ease;
+
+  /* ── Sidebar ─────────────────────────────────── */
+  --sidebar-width: 260px;
+
+  /* ── Z-index ─────────────────────────────────── */
+  --z-sidebar:  100;
+  --z-header:   200;
+  --z-modal:    400;
+  --z-toast:    500;
+}
